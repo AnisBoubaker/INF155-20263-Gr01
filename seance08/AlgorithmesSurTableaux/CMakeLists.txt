@@ -3,4 +3,6 @@ project(AlgorithmesSurTableaux C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(AlgorithmesSurTableaux main.c)
+add_executable(AlgorithmesSurTableaux main.c
+        fouille.c
+        fouille.h)
