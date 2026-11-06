@@ -5,7 +5,7 @@
 #ifndef ALGORITHMESSURTABLEAUX_FOUILLE_H
 #define ALGORITHMESSURTABLEAUX_FOUILLE_H
 
-int position_article(const int articles[], int taille, int numero);
+int fouille_lineaire(const int tab[], int taille, int numero);
 
 int fouille_binaire(const int valeurs[], int nombre, int cible);
 

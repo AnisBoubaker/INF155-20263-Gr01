@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(AlgorithmesSurTableaux main.c
         fouille.c
-        fouille.h)
+        fouille.h
+        tri.c
+        tri.h)

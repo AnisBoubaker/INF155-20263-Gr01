@@ -4,7 +4,7 @@
 
 #include "fouille.h"
 
-int position_article(const int articles[], int taille, int numero){
+int fouille_lineaire(const int articles[], int taille, int numero){
     for(int i=0; i<taille; i++){
         if(articles[i]==numero){
             return i;
