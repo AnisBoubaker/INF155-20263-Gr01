@@ -15,6 +15,7 @@ typedef struct etudiant {
 
 //void afficher_etudiant(Etudiant etudiant);
 void afficher_etudiant(const Etudiant *etudiant);
+double calculer_moyenne(const Etudiant *e);
 
 int main(void) {
 
@@ -41,9 +42,25 @@ int main(void) {
 
     afficher_etudiant(&e2);
 
+    printf("Moyenne de l'etudiant e1: %.2lf\n", calculer_moyenne(&e1));
 
     return 0;
 }
+
+/**
+ * Écrire la fonction calculer_moyenne
+ * qui définit les pondérations sous forme de constantes (0.15, 0.15, 0.30, 0.40)
+ * et qui retourne la moyenne de l'étudiant-e réçu-e en paramètre.
+ */
+double calculer_moyenne(const Etudiant *e) {
+    const double pond_tp1 = 0.15;
+    const double pond_tp2 = 0.15;
+    const double pond_intra = 0.3;
+    const double pond_final = 0.4;
+
+    return pond_tp1*e->tp1 + pond_tp2*e->tp2 + pond_intra*e->intra + pond_final*e->final;
+}
+
 
 
 void afficher_etudiant(const Etudiant *etudiant) {
